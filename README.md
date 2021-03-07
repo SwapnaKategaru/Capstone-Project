@@ -57,11 +57,11 @@ Parameters of lightgbmclassifier are:
 
 The model used for this experiment is Logistic Regression. It is because logistic regression is simple and effective classification algorithm used for binary classification task as seen in this case we are predicting the DEATH_EVENT variable of an individual and gives good accuracy for simple datasets. Lgistic regression uses maximum likelihood estimation (MLE) to obtain the model coefficients that relate predictors to the target.
 
-Types of parameters:
+### Types of parameters:
 
 Configuration for hyperdrive run to execute experiment with specified parameters like maximum total no.of runs to create and execute concurrently, name of the primary metric and primary metric goal is defined along with following hyperparameters:
 
-* **Parameter sampler :**
+**Parameter sampler :**
 Specifying parameter sampler using *RandomParameterSampling* class that enables random sampling over a hyperparameter search space from a set of discrete or continuous values(*C* and *max_iter*). 
 
 Random Parameter Sampler is used as:
@@ -72,7 +72,7 @@ Random Parameter Sampler is used as:
 * *choice* function helps to sample from only specified set of values.
 * *uniform* function helps to maintain uniform distribution of samples taken.
 
-* **Policy :**
+**Policy :**
 Specifies early termintaion policy for early stopping with required amount of *evaluation interval*, *slack factor* and *delay_evaluation*.
 
 Bandit Policy is used as:
@@ -84,7 +84,14 @@ Bandit Policy is used as:
 
 ### Results
 *TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
+The hyperdrive optimized logistic regression model produced an accuracy of XXXXXXX. Parameters of the model includes:
 
+* __C__ : Inverse of regularization strength where smaller values specify stronger regularization
+* __max_iter__ : Maximum number of iterations taken for the solvers to converge
+* __penalty__ : Used to specify the norm used in the penalization
+* __fit_intercept__ : Specifies if a constant(bias or intercept) should be added to the decision function
+* __intercept_scaling__ : A synthetic feature with constant value equal to intercept_scaling appended to instance vector
+* __tol__ : Tolerance for stopping criteria
 
 
 *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
