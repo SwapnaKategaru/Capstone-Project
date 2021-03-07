@@ -61,7 +61,7 @@ The model used for this experiment is Logistic Regression. It is because logisti
 
 Configuration for hyperdrive run to execute experiment with specified parameters like maximum total no.of runs to create and execute concurrently, name of the primary metric and primary metric goal is defined along with following hyperparameters:
 
-**Parameter sampler :**
+**Parameter sampler :**   
 Specifying parameter sampler using *RandomParameterSampling* class that enables random sampling over a hyperparameter search space from a set of discrete or continuous values(*C* and *max_iter*). 
 
 Random Parameter Sampler is used as:
@@ -72,7 +72,7 @@ Random Parameter Sampler is used as:
 * *choice* function helps to sample from only specified set of values.
 * *uniform* function helps to maintain uniform distribution of samples taken.
 
-**Policy :**
+**Policy :**    
 Specifies early termintaion policy for early stopping with required amount of *evaluation interval*, *slack factor* and *delay_evaluation*.
 
 Bandit Policy is used as:
@@ -97,10 +97,18 @@ The hyperdrive optimized logistic regression model produced an accuracy of XXXXX
 *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 
 ## Model Deployment
-*TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
+*TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input. 
+
+The model with best accuracy is deployed as web service which is a AutoML model with better performance. 
+
+* A model is deployed to Azure Container Instances(ACI), by creating a deployment configuration that describes the compute resources required(like number of cores and memory). 
+* Creating an inference configuration, which describes the environment needed to host the model and web service.
+* AzureML-AutoML environment is used which is a curated environment available in Azure Machine Learning workspace.
+
+* Deploying an Azure Machine Learning model as a web service creates a REST API endpoint. This project shows key based authentication used and Swagger URI that is generated through inference schema in score.py script file.
+* This endpoint can be used to consume web service using scoring endpoint URL and Primary Key. We can send data and make a request to this endpoint and receive the prediction returned by the model. 
+* In this project, the data is requested to endpoint through endpoint.py script and also using Python SDK where input json payload of two sets of data instaces is used.
+* A post request is sent to endpoint that uses scoring_uri and primary key for authentication. This results in displaying json response as output.
 
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
-- A working model
-- Demo of the deployed  model
-- Demo of a sample request sent to the endpoint and its response
