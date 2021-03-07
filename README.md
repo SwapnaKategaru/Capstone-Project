@@ -62,6 +62,7 @@ The model used for this experiment is Logistic Regression. It is because logisti
 Configuration for hyperdrive run to execute experiment with specified parameters like maximum total no.of runs to create and execute concurrently, name of the primary metric and primary metric goal is defined along with following hyperparameters:
 
 **Parameter sampler :**   
+
 Specifying parameter sampler using *RandomParameterSampling* class that enables random sampling over a hyperparameter search space from a set of discrete or continuous values(*C* and *max_iter*). 
 
 Random Parameter Sampler is used as:
@@ -73,6 +74,7 @@ Random Parameter Sampler is used as:
 * *uniform* function helps to maintain uniform distribution of samples taken.
 
 **Policy :**    
+
 Specifies early termintaion policy for early stopping with required amount of *evaluation interval*, *slack factor* and *delay_evaluation*.
 
 Bandit Policy is used as:
@@ -83,6 +85,7 @@ Bandit Policy is used as:
 
 
 ### Results
+
 *TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
 The hyperdrive optimized logistic regression model produced an accuracy of XXXXXXX. Parameters of the model includes:
 
