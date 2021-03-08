@@ -2,6 +2,9 @@
 
 This project is part of the Udacity Azure ML Nanodegree. In this project, we build a machine learning model using the Python SDK and a provided Scikit-learn model. In this project, we create two models - one using Automated ML and one customized model whose hyperparameters are tuned using HyperDrive. The best performing model is deployed as a web service(ACI) to the endpoint that can be consumed by sending sample requests to the service.
 
+## Architectural Diagram
+![](images/flowchart.png)
+
 ## Dataset
 
 The dataset used in this notebook is **heart_failure_clinical_records_dataset.csv** which is an external dataset available in kaggle.
@@ -56,10 +59,13 @@ Some of the ways to improve could be:
 * Specifying custom ensemble behavior in an AutoMLConfig object using ensemble setting of parameters. 
 * Also, the xgboostclassifier is blocked in AutoMLConfig due to incompatible dependency issue for sdk version(1.22.0) used for this project and enabling xgboost can improve       performance as it uses a more regularized model formalization that controls over-fitting.
 
+1. Screenshot of **Run Details Widget** of AutoML Run.
 
-## *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 ![](images/screenshot1.png)
 
+2. Screenshot of model showing its **RunID**.
+
+![](images/screenshot2.png)
 
 ## Hyperparameter Tuning
 
@@ -76,6 +82,11 @@ This python script file is used to run the hyperdrive experiment that includes c
 **Split Data** : Split of data into train and test subsets is done using *train_test_split* function with specified random state of split(random_state=42) and size of test set(test_size=0.33).  
 
 **Script arguments** : LogisticRegression class is used to regularise by specifying parameters like *Regularization strength* and *Maximum number of iterations*.
+
+3. Screenshot showing Sampling method, Early Termination Policy, Hyperparameter Search space used for hyperdrive run.
+
+![](images/screenshot8.png)
+
 
 ### Types of parameters:
 
@@ -117,7 +128,17 @@ The hyperdrive optimized logistic regression model produced an accuracy of 0.72.
 
 Hyperdrive model can be improved further by tuning with different hyperparameters that contribute for improvement in its performance. We can also improve the scoring by optimizing with other metrics like Log Loss and F1-Score. Use more appropriate parameters for hyperdrive configuration settings and increase the count of maximum total runs and concurrent runs. 
 
-## *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+4. Screenshot of **Run Details Widget** of Hyperdrive Run. 
+
+![](images/screenshot5.png)
+
+5. Screenshot of Run Details Widget showing **C** and **max_iter** values for hyperdrive runs.
+
+![](images/screenshot6.png)
+
+6. Screenshot of hyperdrive with its **RunID**.
+
+![](images/screenshot4.png)
 
 ## Model Deployment
 
@@ -141,6 +162,36 @@ The model with best accuracy is deployed as web service which is a **AutoML mode
 * Use Azure Kubernetes Services(AKS) instead of Azure Container Insance(ACI) as AKS helps in minimizing infrastructure maintenance, uses automated upgrades, repairs, monitoring and scaling. This leads to faster development and integration.
 * Use Dedicated virtual machine instead of low-priority as these vm do not guarantee compute nodes.
 * GPU can be used instead of CPU as it enormously increases the speed.
+
+## Screenshots 
+
+1. Screenshot showing automl model as registered.
+
+![](images/screenshot3.png)
+
+2. Screenshot showing hyperdrive model as registered.
+ 
+![](images/screenshot7.png)
+
+3. Screenshot showing Deployment status of endpoint model as Healthy.
+ 
+![](images/screenshot10.png)
+
+4. Screenshot showing webservice being deleted and shutdown of computes used.
+ 
+![](images/screenshot14.png)
+![](images/screenshot12.png)
+
+### Enabling logging with logs.py script file
+
+5. Screenshot showing False for Application insights before logging.
+   
+![](images/screenshot9.png)
+
+6. Screenshot showing Application insights enabled to True
+
+![](images/screenshot11.png)
+
 
 
 ## Screen Recording
