@@ -9,9 +9,9 @@ This dataset contains data of 299 patients and 12 features that are useful to pr
 
 
 ### Overview
-**No.of patients data collected** : 299   
-**Input variables or features** : age, anaemia, creatinine_phosphokinase, diabetes, ejection_fraction, high_blood_pressure, platelets, serum_creatinine, serum_sodium, sex, smoking, time   
-**Output/target variable** : DEATH_EVENT
+* **No.of patients data collected** : 299   
+* **Input variables or features** : age, anaemia, creatinine_phosphokinase, diabetes, ejection_fraction, high_blood_pressure, platelets, serum_creatinine, serum_sodium, sex, smoking, time   
+* Output/target variable** : DEATH_EVENT
 
 ### Task
 In this project, we create a classification model for predicting mortality rate/DEATH_EVENT(target variabe) that is caused due to Heart Failure.
@@ -68,7 +68,8 @@ This python script file is used to run the hyperdrive experiment that includes c
 
 **Clean data** : A clean_data function is used to clean the dataset and is subjected to normalisation.
 
-**Split Data** : Split of data into train and test subsets is done using train_test_split function with specified random state of split(random_state=42) and size of test set(test_size=0.33).
+**Split Data** : Split of data into train and test subsets is done using train_test_split function with specified random state of split(random_state=42) and size of test set(test_size=0.33).  
+
 **Script arguments** : LogisticRegression class is used to regularise by specifying parameters like Regularization strength and Maximum number of iterations.
 
 ### Types of parameters:
