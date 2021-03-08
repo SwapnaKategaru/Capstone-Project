@@ -9,9 +9,9 @@ This dataset contains data of 299 patients and 12 features that are useful to pr
 
 
 ### Overview
-*No.of patients data collected* : 299   
-*Input variables or features* : age, anaemia, creatinine_phosphokinase, diabetes, ejection_fraction, high_blood_pressure, platelets, serum_creatinine, serum_sodium, sex, smoking, time   
-*Output/target variable* : DEATH_EVENT
+**No.of patients data collected** : 299   
+**Input variables or features** : age, anaemia, creatinine_phosphokinase, diabetes, ejection_fraction, high_blood_pressure, platelets, serum_creatinine, serum_sodium, sex, smoking, time   
+**Output/target variable** : DEATH_EVENT
 
 ### Task
 In this project, we create a classification model for predicting mortality rate/DEATH_EVENT(target variabe) that is caused due to Heart Failure.
@@ -115,8 +115,19 @@ The model with best accuracy is deployed as web service which is a **AutoML mode
 
 * Deploying an Azure Machine Learning model as a web service creates a REST API endpoint. This project shows key based authentication used and Swagger URI that is generated through inference schema in score.py script file.
 * This endpoint can be used to consume web service using scoring endpoint URL and Primary Key. We can send data and make a request to this endpoint and receive the prediction returned by the model. 
-* In this project, the data is requested to endpoint through endpoint.py script and also using Python SDK where input json payload of two sets of data instaces is used.
-* A post request is sent to endpoint that uses scoring_uri and primary key for authentication. This results in displaying json response as output.
+* In this project, the data is requested to endpoint through endpoint.py script that has sample input from the dataset used and also using Python SDK where input json payload of two sets of data instaces is used.
+* A post request is sent to endpoint that uses scoring_uri and primary key for authentication. This results in displaying json response as output from endpoint.
+
+## Future improvements for project
+
+* Enable deep learning while specifying classification task type for autoML as it applies default techniques depending on the number of rows present in training dataset provided and applies train/validation split with required no.of cross validations without explicitly being provided.
+* Use iterations parameter of AutoMLConfig Class that enables use of different algorithms and parameter combinations to test during an automated ML experiment and increase experiment timeout minutes.
+* Use Azure Kubernetes Services(AKS) instead of Azure Container Insance(ACI) as AKS helps in minimizing infrastructure maintenance, uses automated upgrades, repairs, monitoring and scaling. This leads to faster development and integration.
+* Use Dedicated virtual machine instead of low-priority as these vm do not guarantee compute nodes.
+* GPU can be used instead of CPU as it enormously increases the speed.
+
 
 ## Screen Recording
+Link to screencast : XXXXX
+Screencast demonstrates a working model, deployed model, a sample request sent to the endpoint and its response and additional feature of the model that shows enabling application insights through logs.py script file. Logging the deployed model is important as it helps detect anomalies, includes analytic tools, retrieve logs from a deployed model and has vital role to debug problems in production environments.
 
