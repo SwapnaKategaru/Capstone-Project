@@ -57,6 +57,9 @@ Parameters of **lightgbmclassifier** are:
 * __n_estimators__ : Number of boosted trees to fit having default set to 100
 * __num_leaves__ : Maximum tree leaves for base learners
 
+
+## Further Improvements for automl model
+
 This model can be improved further by specifying additional parameters for automl configuration and settings that contribute for its better performance. 
 Some of the ways to improve could be: 
 * Using appropriate no.of cross validations as it reduces bias and improves generalizing pattern by the model.
@@ -73,7 +76,7 @@ Some of the ways to improve could be:
 
 ## Hyperparameter Tuning
 
-The model used for this experiment is Logistic Regression from scikit learn library. It is because logistic regression is simple and effective classification algorithm used for binary classification task as seen in this case we are predicting the DEATH_EVENT variable of an individual and gives good accuracy for simple datasets. Logistic regression uses *Maximum Likelihood Estimation*(MLE) to obtain the model coefficients that relate predictors to the target. 
+The model used for this experiment is **Logistic Regression** from scikit learn library. It is because logistic regression is simple and effective classification algorithm used for binary classification task as seen in this case we are predicting the DEATH_EVENT variable of an individual and gives good accuracy for simple datasets. Logistic regression uses *Maximum Likelihood Estimation*(MLE) to obtain the model coefficients that relate predictors to the target. 
 
 ### Train script python file
 
@@ -123,7 +126,7 @@ Specifies early termintaion policy for early stopping with required amount of *e
 
 ### Results
 
-The hyperdrive model whose hyperparameters are optimized for logistic regression model produced an accuracy of **0.727272**. The best run shows **--C** value of **0.89** and **--max_iter** value of **140**.
+The hyperdrive model whose hyperparameters are optimized for **Logistic Regression** model produced an accuracy of **0.727272**. The best run shows **--C** value of **0.89** and **--max_iter** value of **140**.
 
 Screenshot of Run Details Widget showing **C** and **max_iter** values for hyperdrive runs.
 
@@ -137,6 +140,9 @@ The hyperdrive optimized logistic regression model produced an accuracy of 0.72.
 * __fit_intercept__ : Specifies if a constant(bias or intercept) should be added to the decision function
 * __intercept_scaling__ : A synthetic feature with constant value equal to intercept_scaling appended to instance vector
 * __tol__ : Tolerance for stopping criteria
+
+
+## Further Improvements for hyperdrive model
 
 Hyperdrive model can be improved further by tuning with different hyperparameters that contribute for improvement in its performance. We can also improve the scoring by optimizing with other metrics like Log Loss and F1-Score. Use more appropriate parameters for hyperdrive configuration settings and increase the count of maximum total runs and concurrent runs. 
 
