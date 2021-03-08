@@ -4,7 +4,7 @@ This project is part of the Udacity Azure ML Nanodegree. In this project, we bui
 
 ## Dataset
 
-The dataset used in this notebook is heart_failure_clinical_records_dataset.csv which is an external dataset available in kaggle.
+The dataset used in this notebook is **heart_failure_clinical_records_dataset.csv** which is an external dataset available in kaggle.
 This dataset contains data of 299 patients and 12 features that are useful to predict mortality of a individual due to heart failure.
 
 
@@ -22,7 +22,8 @@ In this project, we create a classification model for predicting mortality rate/
 
 ## Automated ML
 
-**Automl Settings** - Using AUC weighted as the primary metric for optimisation during model training as it optimizes well for datasets that are of small size, featurisation set to auto, max_concurrent_iterations set as '4' for maximum number of iterations to execute in parallel, verbosity level set to default as logging.INFO for writing to log file.    
+**Automl Settings** - Using AUC weighted as the primary metric for optimisation during model training as it optimizes well for datasets that are of small size, featurisation set to auto, max_concurrent_iterations set as '4' for maximum number of iterations to execute in parallel, verbosity level set to default as logging.INFO for writing to log file.      
+
 **AutoML Configuration** - Classification experiment with experiment timeout minutes set to 15 minutes and 2 cross-validation folds. Blocked model is XGBoostClassifier along with values for training data and label column name parameters.
 
 ### Results
@@ -56,7 +57,7 @@ Some of the ways to improve could be:
 * Also, the xgboostclassifier is blocked in AutoMLConfig due to incompatible dependency issue for sdk version(1.22.0) used for this project and enabling xgboost can improve       performance as it uses a more regularized model formalization that controls over-fitting.
 
 
-# *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+## *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 
 ## Hyperparameter Tuning
 
@@ -114,7 +115,7 @@ The hyperdrive optimized logistic regression model produced an accuracy of 0.72.
 
 Hyperdrive model can be improved further by tuning with different hyperparameters that contribute for improvement in its performance. We can also improve the scoring by optimizing with other metrics like Log Loss and F1-Score. Use more appropriate parameters for hyperdrive configuration settings and increase the count of maximum total runs and concurrent runs. 
 
-# *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+## *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 
 ## Model Deployment
 
