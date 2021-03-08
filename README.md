@@ -1,11 +1,31 @@
 # Capstone Project - Azure Machine Learning Engineer
 
+
+## Index
+
+* 1.1 Overview of the project
+* 1.2 Architectural Diagram
+* 1.3 Dataset
+* 1.4 Automated ML
+* 1.5 Further Improvements for automl model
+* 1.6 Hyperparameter Tuning
+* 1.7 HyperDrive Configuration
+* 1.8 Further Improvements for hyperdrive model
+* 1.9 Model Deployment
+* 1.10 Consume Web Service
+* 1.11 Future improvements for project
+* 1.12 Screenshots
+* 1.13 Screen Recording
+
+
+## 1.1 Overview of the project
+
 This project is part of the Udacity Azure ML Nanodegree. In this project, we build a machine learning model using the Python SDK and a provided Scikit-learn model. In this project, we create two models - one using Automated ML and one customized model whose hyperparameters are tuned using HyperDrive. The best performing model is deployed as a web service(ACI) to the endpoint that can be consumed by sending sample requests to the service.
 
-## Architectural Diagram
+## 1.2 Architectural Diagram
 ![](images/flowchart.png)
 
-## Dataset
+## 1.3 Dataset
 
 The dataset used in this notebook is **heart_failure_clinical_records_dataset.csv** which is an external dataset available in kaggle.
 This dataset contains data of 299 patients and 12 features that are useful to predict mortality of a individual due to heart failure.
@@ -19,11 +39,11 @@ This dataset contains data of 299 patients and 12 features that are useful to pr
 ### Task
 In this project, we create a classification model for predicting mortality rate/DEATH_EVENT(target variabe) that is caused due to Heart Failure.
 
-### Access
+### Accessing of data
 * Importing of data from csv file (heart_failure_clinical_records_dataset) using azureml's TabularDatasetFactory class.
 * Create a tabular dataset.
 
-## Automated ML
+## 1.4 Automated ML
 
 **Automl Settings** - Using AUC weighted as the primary metric for optimisation during model training as it optimizes well for datasets that are of small size, featurisation set to auto, max_concurrent_iterations set as '4' for maximum number of iterations to execute in parallel, verbosity level set to default as logging.INFO for writing to log file.      
 
@@ -58,7 +78,7 @@ Parameters of **lightgbmclassifier** are:
 * __num_leaves__ : Maximum tree leaves for base learners
 
 
-## Further Improvements for automl model
+## 1.5 Further Improvements for automl model
 
 This model can be improved further by specifying additional parameters for automl configuration and settings that contribute for its better performance. 
 Some of the ways to improve could be: 
@@ -74,7 +94,7 @@ Some of the ways to improve could be:
 
 ![](images/screenshot2.png)
 
-## Hyperparameter Tuning
+## 1.6 Hyperparameter Tuning
 
 The model used for this experiment is **Logistic Regression** from scikit learn library. It is because logistic regression is simple and effective classification algorithm used for binary classification task as seen in this case we are predicting the DEATH_EVENT variable of an individual and gives good accuracy for simple datasets. Logistic regression uses *Maximum Likelihood Estimation*(MLE) to obtain the model coefficients that relate predictors to the target. 
 
@@ -91,7 +111,7 @@ This python script file is used to run the hyperdrive experiment that includes c
 **Script arguments** : LogisticRegression class is used to regularise by specifying parameters like *Regularization strength* and *Maximum number of iterations*.
 
 
-### HyperDrive Configuration
+### 1.7 HyperDrive Configuration
 
 3. Screenshot showing **Sampling method**, **Early Termination Policy**, **Hyperparameter Search space** used for hyperdrive run.
 
@@ -142,7 +162,7 @@ The hyperdrive optimized logistic regression model produced an accuracy of 0.72.
 * __tol__ : Tolerance for stopping criteria
 
 
-## Further Improvements for hyperdrive model
+## 1.8 Further Improvements for hyperdrive model
 
 Hyperdrive model can be improved further by tuning with different hyperparameters that contribute for improvement in its performance. We can also improve the scoring by optimizing with other metrics like Log Loss and F1-Score. Use more appropriate parameters for hyperdrive configuration settings and increase the count of maximum total runs and concurrent runs. 
 
@@ -154,7 +174,7 @@ Hyperdrive model can be improved further by tuning with different hyperparameter
 
 ![](images/screenshot4.png)
 
-## Model Deployment
+## 1.9 Model Deployment
 
 The model with best accuracy is deployed as web service which is a **AutoML model** with better performance showing Accuracy of 0.9. 
 
@@ -168,7 +188,7 @@ Screenshot of deployed model showing **REST Endpoint URL**, **Key based authenti
 ![](images/screenshot17.png)
 
 
-## Consume Web Service
+## 1.10 Consume Web Service
 
 * This endpoint can be used to consume web service using scoring endpoint URL and Primary Key. We can send data and make a request to this endpoint and receive the prediction returned by the model. 
 
@@ -184,7 +204,7 @@ Screenshot of **endpoint.py** script run that shows response from model.
 ![](images/screenshot16.png)
 
 
-## Future improvements for project
+## 1.11 Future improvements for project
 
 * Enable deep learning while specifying classification task type for autoML as it applies default techniques depending on the number of rows present in training dataset provided and applies train/validation split with required no.of cross validations without explicitly being provided.
 * Use iterations parameter of AutoMLConfig Class that enables use of different algorithms and parameter combinations to test during an automated ML experiment and increase experiment timeout minutes.
@@ -192,7 +212,7 @@ Screenshot of **endpoint.py** script run that shows response from model.
 * Use Dedicated virtual machine instead of low-priority as these vm do not guarantee compute nodes.
 * GPU can be used instead of CPU as it enormously increases the speed.
 
-## Screenshots 
+## 1.12 Screenshots 
 
 1. Screenshot showing automl model as registered.
 
@@ -217,13 +237,18 @@ Screenshot of **endpoint.py** script run that shows response from model.
    
 ![](images/screenshot9.png)
 
-6. Screenshot showing Application insights enabled to True
+6. Screenshot showing script run of python logs file
+
+![](images/screenshot19.png)
+
+7. Screenshot showing Application insights enabled to True
 
 ![](images/screenshot11.png)
 
 
 
-## Screen Recording
+## 1.13 Screen Recording
+
 **Link to screencast :** XXXXX
 
 Screencast demonstrates a working model, deployed model, a sample request sent to the endpoint and its response and additional feature of the model that shows enabling application insights through **logs.py** script file.   
