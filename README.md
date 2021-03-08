@@ -58,6 +58,8 @@ Some of the ways to improve could be:
 
 
 ## *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+![](images/screenshot1.png)
+
 
 ## Hyperparameter Tuning
 
