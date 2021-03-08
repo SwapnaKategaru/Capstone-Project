@@ -37,7 +37,10 @@ This dataset contains data of 299 patients and 12 features that are useful to pr
 * **Output/target variable** : DEATH_EVENT
 
 ### Task
-In this project, we create a classification model for predicting mortality rate/DEATH_EVENT(target variabe) that is caused due to Heart Failure.
+In this project, we create a classification model for predicting mortality rate/DEATH_EVENT(target variabe) that is caused due to Heart Failure using an external dataset.  
+This project shows creating two trained models - one using Automated ML and one customized model whose hyperparameters are tuned using HyperDrive. Followed by, comparison of performance of both the models and deployment of best performing model as a web service for consumption of endpoint.
+
+This project will demonstrate your ability to use an external dataset in your workspace,
 
 ### Accessing of data
 * Importing of data from csv file (heart_failure_clinical_records_dataset) using azureml's TabularDatasetFactory class.
