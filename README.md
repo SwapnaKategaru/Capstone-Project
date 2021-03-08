@@ -87,7 +87,10 @@ This python script file is used to run the hyperdrive experiment that includes c
 
 **Script arguments** : LogisticRegression class is used to regularise by specifying parameters like *Regularization strength* and *Maximum number of iterations*.
 
-3. Screenshot showing Sampling method, Early Termination Policy, Hyperparameter Search space used for hyperdrive run.
+
+### HyperDrive Configuration
+
+3. Screenshot showing **Sampling method**, **Early Termination Policy**, **Hyperparameter Search space** used for hyperdrive run.
 
 ![](images/screenshot8.png)
 
@@ -118,12 +121,13 @@ Specifies early termintaion policy for early stopping with required amount of *e
 * It terminates runs if primary metric is not within specified slack factor in comparison to the best performing run.
 * This policy is based on slack factor and evaluation interval.
 
+### Results
+
+The hyperdrive model whose hyperparameters are optimized for logistic regression model produced an accuracy of **0.727272**. The best run shows **--C** value of **0.89** and **--max_iter** value of **140**.
 
 Screenshot of Run Details Widget showing **C** and **max_iter** values for hyperdrive runs.
 
 ![](images/screenshot6.png)
-
-### Results
 
 The hyperdrive optimized logistic regression model produced an accuracy of 0.72. Parameters of the model includes:
 
