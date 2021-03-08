@@ -3,19 +3,19 @@
 
 ## Index
 
-* 1.1 Overview of the project
-* 1.2 Architectural Diagram
-* 1.3 Dataset
-* 1.4 Automated ML
-* 1.5 Further Improvements for automl model
-* 1.6 Hyperparameter Tuning
-* 1.7 HyperDrive Configuration
-* 1.8 Further Improvements for hyperdrive model
-* 1.9 Model Deployment
-* 1.10 Consume Web Service
-* 1.11 Future improvements for project
-* 1.12 Screenshots
-* 1.13 Screen Recording
+* **1.1 Overview of the project
+* **1.2 Architectural Diagram
+* **1.3 Dataset
+* **1.4 Automated ML
+* **1.5 Further Improvements for automl model
+* **1.6 Hyperparameter Tuning
+* **1.7 HyperDrive Configuration
+* **1.8 Further Improvements for hyperdrive model
+* **1.9 Model Deployment
+* **1.10 Consume Web Service
+* **1.11 Future improvements for project
+* **1.12 Screenshots
+* **1.13 Screen Recording
 
 
 ## 1.1 Overview of the project
@@ -31,7 +31,7 @@ The dataset used in this notebook is **heart_failure_clinical_records_dataset.cs
 This dataset contains data of 299 patients and 12 features that are useful to predict mortality of a individual due to heart failure.
 
 
-### Overview
+### Overview of Dataset
 * **No.of patients data collected** : 299   
 * **Input variables or features** : age, anaemia, creatinine_phosphokinase, diabetes, ejection_fraction, high_blood_pressure, platelets, serum_creatinine, serum_sodium, sex, smoking, time   
 * **Output/target variable** : DEATH_EVENT
