@@ -214,34 +214,34 @@ Screenshot of **endpoint.py** script run that shows response from model.
 
 ## 1.12 Screenshots 
 
-1. Screenshot showing automl model as registered.
+1. Screenshot showing **automl model as Registered**.
 
 ![](images/screenshot3.png)
 
-2. Screenshot showing hyperdrive model as registered.
+2. Screenshot showing **hyperdrive model as Registered**.
  
 ![](images/screenshot7.png)
 
-3. Screenshot showing Deployment status of endpoint model as Healthy.
+3. Screenshot showing Deployment status of endpoint model as **Healthy**.
  
 ![](images/screenshot10.png)
 
-4. Screenshot showing webservice being deleted and shutdown of computes used.
+4. Screenshot showing **Webservice being deleted** and **Shutdown of computes** used.
  
 ![](images/screenshot14.png)
 ![](images/screenshot12.png)
 
 ### Enabling logging with logs.py script file
 
-5. Screenshot showing False for Application insights before logging.
+5. Screenshot showing **False** for Application insights before logging.
    
 ![](images/screenshot9.png)
 
-6. Screenshot showing script run of python logs file
+6. Screenshot showing **script run of python logs file**
 
 ![](images/screenshot19.png)
 
-7. Screenshot showing Application insights enabled to True
+7. Screenshot showing Application insights enabled to **True**
 
 ![](images/screenshot11.png)
 
