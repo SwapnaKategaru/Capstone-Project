@@ -252,7 +252,7 @@ Screenshot of **endpoint.py** script run that shows response from model.
 
 ## 1.13 Screen Recording
 
-**Link to screencast :** XXXXX
+**Link to screencast :** https://drive.google.com/file/d/1sSQcEJRL6a4sbfy2R8nU7wpQdqyQLEaJ/view?usp=sharing
 
 Screencast demonstrates a working model, deployed model, a sample request sent to the endpoint and its response and additional feature of the model that shows enabling application insights through **logs.py** script file.   
 Logging the deployed model is important as it helps detect anomalies, includes analytic tools, retrieve logs from a deployed model and has vital role to debug problems in production environments.
