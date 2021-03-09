@@ -3,19 +3,19 @@
 
 ## Index
 
-* **1.1 Overview of the project
-* **1.2 Architectural Diagram
-* **1.3 Dataset
-* **1.4 Automated ML
-* **1.5 Further Improvements for automl model
-* **1.6 Hyperparameter Tuning
-* **1.7 HyperDrive Configuration
-* **1.8 Further Improvements for hyperdrive model
-* **1.9 Model Deployment
-* **1.10 Consume Web Service
-* **1.11 Future improvements for project
-* **1.12 Screenshots
-* **1.13 Screen Recording
+* **1.1 Overview of the project**
+* **1.2 Architectural Diagram**
+* **1.3 Dataset**
+* **1.4 Automated ML**
+* **1.5 Further Improvements for automl model**
+* **1.6 Hyperparameter Tuning**
+* **1.7 HyperDrive Configuration**
+* **1.8 Further Improvements for hyperdrive model**
+* **1.9 Model Deployment**
+* **1.10 Consume Web Service**
+* **1.11 Future improvements for project**
+* **1.12 Screenshots**
+* **1.13 Screen Recording**
 
 
 ## 1.1 Overview of the project
